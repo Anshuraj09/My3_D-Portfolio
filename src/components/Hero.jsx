@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const isMobile = window.innerWidth <= 500; // Check if the device is mobile
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -19,13 +20,15 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Anshu Raj</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+            {isMobile
+              ? "I develop user interfaces and web applications"
+              : "I develop 3D visuals, user interfaces, and web applications"}
           </p>
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* Render ComputersCanvas only if not mobile */}
+      {!isMobile && <ComputersCanvas />}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
