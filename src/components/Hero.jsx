@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-// import { ComputersCanvas } from "./canvas";  // Commenting this out for debugging
+import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
     <section className="relative w-full min-h-screen mx-auto">
-      <div
-        className="absolute inset-0 top-[100px] max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-start gap-5"
-      >
+      {/* Container for content */}
+      <div className="absolute inset-0 top-[100px] max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-start gap-5">
+        
         {/* Violet Gradient Line */}
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -26,10 +26,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Commenting out ComputersCanvas for now */}
-      {/* <div className="flex justify-center items-center w-full h-[50vh] sm:h-[70vh]">
+      {/* Centered ComputersCanvas with Responsive Behavior */}
+      <div className="relative w-full h-[30vh] sm:h-[50vh] lg:h-[60vh] flex justify-center items-center">
         <ComputersCanvas />
-      </div> */}
+      </div>
 
       {/* Scroll Indicator */}
       <div className="absolute xs:bottom-10 bottom-24 w-full flex justify-center items-center">
