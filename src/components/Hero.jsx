@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+// import { ComputersCanvas } from "./canvas";  // Commenting this out for debugging
 
 const Hero = () => {
   return (
@@ -26,10 +26,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3D Canvas */}
-      <div className="flex justify-center items-center w-full h-[50vh] sm:h-[70vh]">
+      {/* Commenting out ComputersCanvas for now */}
+      {/* <div className="flex justify-center items-center w-full h-[50vh] sm:h-[70vh]">
         <ComputersCanvas />
-      </div>
+      </div> */}
 
       {/* Scroll Indicator */}
       <div className="absolute xs:bottom-10 bottom-24 w-full flex justify-center items-center">
